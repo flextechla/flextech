@@ -97,6 +97,7 @@ export default function Hero() {
               title="Virus Removed"
               titleColor="text-brand-accent"
               subtitle="100% Guaranteed"
+              href="/services/virus-removal"
             />
             <FloatingCard
               position="top-[25%] left-[-12%]"
@@ -106,6 +107,7 @@ export default function Hero() {
               title="On-Site Service"
               titleColor="text-brand-blue"
               subtitle="We come to you"
+              href="/services/on-site"
             />
             <FloatingCard
               position="bottom-[25%] right-[-10%]"
@@ -115,6 +117,7 @@ export default function Hero() {
               title="Data Recovered"
               titleColor="text-brand-warning"
               subtitle="Files restored safely"
+              href="/services/data-recovery"
             />
             <FloatingCard
               position="top-[5%] left-[5%]"
@@ -124,6 +127,7 @@ export default function Hero() {
               title="Managed Services"
               titleColor="text-brand-danger"
               subtitle="Proactive IT support"
+              href="/services/managed-services"
             />
             <FloatingCard
               position="bottom-[5%] left-[-5%]"
@@ -133,6 +137,7 @@ export default function Hero() {
               title="Consulting"
               titleColor="text-purple-400"
               subtitle="Expert evaluation"
+              href="/services/consulting"
             />
             <FloatingCard
               position="bottom-[2%] right-[15%]"
@@ -142,6 +147,7 @@ export default function Hero() {
               title="Remote Support"
               titleColor="text-cyan-400"
               subtitle="Quick fixes online"
+              href="/services/remote-support"
             />
           </div>
         </motion.div>
@@ -159,6 +165,7 @@ function FloatingCard({
   title,
   titleColor,
   subtitle,
+  href,
 }: {
   position: string;
   delay: string;
@@ -167,10 +174,12 @@ function FloatingCard({
   title: string;
   titleColor: string;
   subtitle: string;
+  href: string;
 }) {
   return (
-    <div
-      className={`absolute ${position} bg-brand-card border border-white/5 rounded-xl px-4 py-3 flex items-center gap-3 text-sm font-medium shadow-[0_8px_32px_rgba(0,0,0,0.3)] animate-bobble`}
+    <a
+      href={href}
+      className={`absolute ${position} bg-brand-card border border-white/5 rounded-xl px-4 py-3 flex items-center gap-3 text-sm font-medium shadow-[0_8px_32px_rgba(0,0,0,0.3)] animate-bobble hover:border-brand-accent/30 hover:shadow-[0_8px_40px_rgba(0,212,170,0.15)] transition-all duration-300 cursor-pointer`}
       style={{ animationDelay: delay }}
     >
       <div
@@ -184,6 +193,6 @@ function FloatingCard({
         </div>
         <div className="text-text-dim text-[0.7rem]">{subtitle}</div>
       </div>
-    </div>
+    </a>
   );
 }
