@@ -90,8 +90,8 @@ export default function Hero() {
 
             {/* Floating Cards */}
             <FloatingCard
-              position="top-[8%] right-[-5%]"
-              delay="-1s"
+              position="top-[2%] right-[10%]"
+              delay="-0.5s"
               iconBg="bg-brand-accent/15"
               icon="✓"
               title="Virus Removed"
@@ -99,8 +99,8 @@ export default function Hero() {
               subtitle="100% Guaranteed"
             />
             <FloatingCard
-              position="bottom-[20%] left-[-8%]"
-              delay="-2.5s"
+              position="top-[25%] left-[-12%]"
+              delay="-2s"
               iconBg="bg-brand-blue/15"
               icon="🔧"
               title="On-Site Service"
@@ -108,13 +108,40 @@ export default function Hero() {
               subtitle="We come to you"
             />
             <FloatingCard
-              position="bottom-[5%] right-[5%]"
-              delay="-0.5s"
+              position="bottom-[25%] right-[-10%]"
+              delay="-3.5s"
               iconBg="bg-brand-warning/15"
               icon="💾"
               title="Data Recovered"
               titleColor="text-brand-warning"
               subtitle="Files restored safely"
+            />
+            <FloatingCard
+              position="top-[5%] left-[5%]"
+              delay="-1s"
+              iconBg="bg-brand-danger/15"
+              icon="📡"
+              title="Managed Services"
+              titleColor="text-brand-danger"
+              subtitle="Proactive IT support"
+            />
+            <FloatingCard
+              position="bottom-[5%] left-[-5%]"
+              delay="-2.5s"
+              iconBg="bg-purple-500/15"
+              icon="📋"
+              title="Consulting"
+              titleColor="text-purple-400"
+              subtitle="Expert evaluation"
+            />
+            <FloatingCard
+              position="bottom-[2%] right-[15%]"
+              delay="-4s"
+              iconBg="bg-cyan-400/15"
+              icon="🖥️"
+              title="Remote Support"
+              titleColor="text-cyan-400"
+              subtitle="Quick fixes online"
             />
           </div>
         </motion.div>
