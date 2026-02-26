@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Calendar, ArrowRight } from "lucide-react";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import { getAllPosts } from "@/lib/posts";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -9,38 +10,9 @@ export const metadata: Metadata = {
     "Tech tips, security advice, and IT insights from FlexTech. Stay informed about protecting your computer and business in Baton Rouge.",
 };
 
-const posts = [
-  {
-    slug: "windows-11-vs-new-computer",
-    title: "Your Computer Doesn't Support Windows 11 — Now What?",
-    excerpt:
-      "Windows 10 support ended in October 2025. If your machine can't run Windows 11, here's an honest look at whether to buy new, go refurbished, or get extended support.",
-    date: "2026-02-16",
-  },
-  {
-    slug: "protect-yourself-from-phishing",
-    title: "How to Protect Yourself from Phishing Attacks",
-    excerpt:
-      "Phishing attacks are one of the most common cyber threats today. Learn how to recognize and avoid them with these practical tips.",
-    date: "2025-01-15",
-  },
-  {
-    slug: "signs-your-computer-has-virus",
-    title: "5 Signs Your Computer Might Have a Virus",
-    excerpt:
-      "Is your computer running slow, showing pop-ups, or behaving strangely? Here are the telltale signs of a virus infection and what to do about it.",
-    date: "2024-11-20",
-  },
-  {
-    slug: "why-you-need-data-backup",
-    title: "Why Every Business Needs a Data Backup Plan",
-    excerpt:
-      "Data loss can happen to anyone. A solid backup strategy is your best insurance against hardware failure, ransomware, and human error.",
-    date: "2024-09-10",
-  },
-];
+export default async function BlogPage() {
+  const posts = await getAllPosts();
 
-export default function BlogPage() {
   return (
     <>
       {/* Hero */}
