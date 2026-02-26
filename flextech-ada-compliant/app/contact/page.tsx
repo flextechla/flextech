@@ -61,7 +61,9 @@ export default function ContactPage() {
 
       {/* Contact Grid */}
       <section className="py-16 px-8">
-        <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12">
+        <div className="max-w-[1100px] mx-auto">
+          <h2 className="sr-only">Get in Touch</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
           {/* Contact Info */}
           <div className="lg:col-span-2 space-y-6">
             {contactInfo.map((item, i) => (
@@ -111,6 +113,7 @@ export default function ContactPage() {
             <ScrollReveal delay={0.1}>
               <ContactForm />
             </ScrollReveal>
+          </div>
           </div>
         </div>
       </section>

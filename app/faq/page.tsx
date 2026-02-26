@@ -72,7 +72,9 @@ export default function FAQPage() {
 
       {/* FAQ List */}
       <section className="py-16 px-8">
-        <div className="max-w-[800px] mx-auto space-y-4">
+        <div className="max-w-[800px] mx-auto">
+          <h2 className="sr-only">Questions and Answers</h2>
+          <div className="space-y-4">
           {faqs.map((faq, i) => (
             <ScrollReveal key={i} delay={i * 0.06}>
               <div className="p-6 bg-brand-card border border-white/5 rounded-xl">
@@ -85,6 +87,7 @@ export default function FAQPage() {
               </div>
             </ScrollReveal>
           ))}
+          </div>
         </div>
       </section>
 

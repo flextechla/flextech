@@ -76,7 +76,11 @@ export default function AboutPage() {
 
       {/* Values */}
       <section className="py-16 px-8">
-        <div className="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="max-w-[1200px] mx-auto">
+          <ScrollReveal>
+            <h2 className="sr-only">Our Values</h2>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {values.map((value, i) => (
             <ScrollReveal key={value.title} delay={i * 0.1}>
               <div className="text-center p-8 bg-brand-card border border-white/[0.04] rounded-2xl h-full">
@@ -85,6 +89,7 @@ export default function AboutPage() {
                     size={36}
                     className="text-brand-accent"
                     strokeWidth={1.5}
+                    aria-hidden="true"
                   />
                 </div>
                 <h3 className="font-display text-[1.05rem] font-bold mb-2">
@@ -96,6 +101,7 @@ export default function AboutPage() {
               </div>
             </ScrollReveal>
           ))}
+          </div>
         </div>
       </section>
 
