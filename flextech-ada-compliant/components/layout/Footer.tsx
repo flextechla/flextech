@@ -17,9 +17,9 @@ function FooterLinkColumn({
 }) {
   return (
     <div>
-      <h4 className="font-display text-[0.9rem] font-bold mb-4 text-white">
+      <h3 className="font-display text-[0.9rem] font-bold mb-4 text-white">
         {title}
-      </h4>
+      </h3>
       <ul className="space-y-2">
         {links.map((link) => (
           <li key={link.href}>
