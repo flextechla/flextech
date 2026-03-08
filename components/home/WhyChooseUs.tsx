@@ -40,7 +40,7 @@ export default function WhyChooseUs() {
                 </div>
                 <h3 className="font-display text-[1.05rem] font-bold mb-2">
                   {card.title}
-                </h4>
+                </h3>
                 <p className="text-text-muted text-[0.85rem] leading-relaxed">
                   {card.description}
                 </p>
